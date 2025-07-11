@@ -46,6 +46,9 @@ app.use((err, req, res, next) => {
     return res.status(errorStatus).send(errorMessage);
   });
 
+app.get("/", (req, res) => {
+  res.send("Backend is working!");
+});
 
 
 app.listen(8800, () => {
