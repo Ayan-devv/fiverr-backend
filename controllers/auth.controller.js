@@ -43,8 +43,10 @@ export const login = async (req, res, next) => {
         secure: false,
       })
       .status(200)
-      .send(info);
-  } catch (err) {
+     .send({
+    token,     
+    user: info,
+  }) catch (err) {
     next(err);
   }
 };
